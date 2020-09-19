@@ -11,7 +11,7 @@ def everything_news(req):
                             'q='+req+
                             '&from='+p+
                             '&sortBy=popularity&'
-                            'apiKey=b5898a93c0704b83a085d7e1b2f408a4')
+                            'apiKey=<API KEY>)
     response = requests.get(url)
     z = response.json()
     H1 =  z['articles'][0]['title']
