@@ -1,11 +1,13 @@
 import discord
 from discord.ext import commands
 import requests
+import numpy as np
 from news import everything_news
 import datetime
 from crypto_graph import *
 from pycoingecko import CoinGeckoAPI
 from wiki import wiki_info
+from Toss import coinFlip, method
 
 cg = CoinGeckoAPI()
 
@@ -15,6 +17,7 @@ client  = commands.Bot(command_prefix = 'kb$')
 async def on_ready():
     print("Bot is ready")
 
+    
 @client.command()
 async def news(ctx,arg):
     embed = discord.Embed(title = "HEADLINES" , color = discord.Colour.green())
@@ -25,6 +28,7 @@ async def news(ctx,arg):
     embed.set_footer(icon_url = ctx.author.avatar_url, text = f"Requested by {ctx.author.name}")
     await ctx.send(embed = embed)
 
+    
 @client.command()
 async def cprice(ctx, crypto):
     crypto = crypto.upper()
@@ -51,6 +55,7 @@ async def cprice(ctx, crypto):
     embed.set_footer(icon_url = ctx.author.avatar_url, text = f"Requested by {ctx.author.name}")
     await ctx.send(embed=embed)
 
+    
 @client.command()
 async def wiki(ctx, subject):
     embed = discord.Embed(title = " " , color = discord.Colour.red())
@@ -58,7 +63,27 @@ async def wiki(ctx, subject):
     embed.set_footer(icon_url = ctx.author.avatar_url, text = f"Requested by {ctx.author.name}")
     await ctx.send(x)
     await ctx.send(embed = embed)
+    
+    
+@client.command()
+async def toss(ctx, member: discord.Member):
+    d = {}
+    probability = .5
+    side = np.random.binomial(1,probability)
+    if (side == 1):
+        x = 0
+    else:
+        x = 1
 
+    d.update({ctx.author.name:1,member.name:0})
+    t =coinFlip()
+    w = method(d,t)
+    res = f"{w} is the winner"
+    embed = discord.Embed(title = "TOSS" , color = discord.Colour.dark_orange())
+    embed.add_field(name = 'RESULT' , value = res , inline = False)
+    await ctx.send(embed=embed)
+
+    
 @client.command()
 async def delete(ctx,amount=2):
     await ctx.channel.purge(limit = amount)
