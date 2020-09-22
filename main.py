@@ -7,7 +7,8 @@ import datetime
 from crypto_graph import *
 from pycoingecko import CoinGeckoAPI
 from wiki import wiki_info
-from Toss import coinFlip, method
+from toss import coinFlip, method
+from weather import weather_res
 
 cg = CoinGeckoAPI()
 
@@ -83,6 +84,25 @@ async def toss(ctx, member: discord.Member):
     embed.add_field(name = 'RESULT' , value = res , inline = False)
     await ctx.send(embed=embed)
 
+
+@client.command()
+async def weather(ctx, city, country):
+    embed = discord.Embed(title = "WEATHER", color = discord.Colour.dark_green())
+    city = str(city)
+    country = str(country)
+    json_data_2 = weather_res(city, country)
+    weather_type = str(json_data_2['weather'][0]['main'])
+    temperature = str(json_data_2['main']['temp']) + '°C'
+    feel_like = str(json_data_2['main']['feels_like']) + '°C'
+    min_temp = str(json_data_2['main']['temp_min']) + '°C'
+    max_temp = str(json_data_2['main']['temp_max']) + ' °C'
+    embed.add_field(name = "CATEGORY", value = weather_type, inline = False )
+    embed.add_field(name = "TEMP", value = temperature, inline = True)
+    embed.add_field(name = "FEELS LIKE", value = feel_like, inline = True)
+    embed.add_field(name = "MIN_TEMP", value = min_temp, inline = True)
+    embed.add_field(name = "MAX_TEMP", value = max_temp, inline = True)
+    embed.set_footer(icon_url = ctx.author.avatar_url, text = f"Requested by {ctx.author.name}")
+    await ctx.send(embed = embed)
     
 @client.command()
 async def delete(ctx,amount=2):
