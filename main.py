@@ -4,11 +4,12 @@ import requests
 import numpy as np
 from news import everything_news
 import datetime
-from crypto_graph import *
+from graph import *
 from pycoingecko import CoinGeckoAPI
 from wiki import wiki_info
 from toss import coinFlip, method
 from weather import weather_res
+from score_scrapper import score
 
 cg = CoinGeckoAPI()
 
@@ -103,11 +104,22 @@ async def weather(ctx, city, country):
     embed.add_field(name = "MAX_TEMP", value = max_temp, inline = True)
     embed.set_footer(icon_url = ctx.author.avatar_url, text = f"Requested by {ctx.author.name}")
     await ctx.send(embed = embed)
-    
+
+
+@client.command()
+async def fb(ctx, team_a, team_b):
+    embed = discord.Embed(title = 'INFO', color = discord.Colour.from_rgb(0, 255, 255))
+    team_a = str(team_a)
+    team_b = str(team_b)
+    result = score(team_a, team_b)
+    embed.add_field(name = "status", value = result, inline = True)
+    embed.set_footer(icon_url = ctx.author.avatar_url, text = f"Requested by {ctx.author.name}")
+    await ctx.send(embed = embed)
+ 
 @client.command()
 async def delete(ctx,amount=2):
     await ctx.channel.purge(limit = amount)
 
 
 
-client.run(<ID>)
+client.run("NzUzOTgyNDk3ODQyMzk3MTk1.X1uG6w.4YZkwoz744yvNDlu1A2a1ZtEiqc")
