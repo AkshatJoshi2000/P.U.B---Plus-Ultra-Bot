@@ -122,4 +122,4 @@ async def delete(ctx,amount=2):
 
 
 
-client.run("NzUzOTgyNDk3ODQyMzk3MTk1.X1uG6w.4YZkwoz744yvNDlu1A2a1ZtEiqc")
+client.run(<API-KEY>)
