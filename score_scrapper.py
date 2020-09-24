@@ -37,4 +37,3 @@ def score(TeamA, TeamB):
                     return "No upcoming matches"
         except NoSuchElementException:
             return 'match is scheduled for %s' %driver.find_element_by_xpath('//*[@id="sports-app"]/div/div[2]/div/div/div/div/div[1]/div[1]/div/span[2]').text
-print(score('barca','real madrid'))
