@@ -14,6 +14,10 @@ from nickname import nickn
 from barney import Barney
 from chandler import Chandler
 from animequote import Animequote
+from gif import Gif
+import discord,asyncio,youtube_dl
+import os
+from dotenv import load_dotenv
 
 cg = CoinGeckoAPI()
 
@@ -22,6 +26,25 @@ client  = commands.Bot(command_prefix = 'kb$')
 @client.event
 async def on_ready():
     print("Bot is ready")
+
+
+from dotenv import load_dotenv
+
+load_dotenv()
+
+exts=['music'] 
+
+
+@client.event
+async def on_ready():
+    song_name='with All For One' 
+    activity_type=discord.ActivityType.playing
+    await client.change_presence(activity=discord.Activity(type=activity_type,name=song_name))
+    print(client.user.name)
+
+for i in exts:
+    client.load_extension(i)
+
 
 
 @client.event
@@ -84,7 +107,7 @@ async def cprice(ctx, crypto):
     usd_24h_vol = str(x[crypto]['usd_24h_vol'])+' USD'
     usd_24h_change = str(x[crypto]['usd_24h_change'])+' USD'
     z = ctx.author.name
-    g = crypto_g(crypto,z)
+    # g = crypto_g(crypto,z)
 
     embed.add_field(name = "USD", value = usd, inline = True )
     embed.add_field(name = "EUR", value= eur, inline = True)
@@ -144,6 +167,23 @@ async def weather(ctx, city, country):
     embed.set_footer(icon_url = ctx.author.avatar_url, text = f"Requested by {ctx.author.name}")
     await ctx.send(embed = embed)
 
+@client.command()
+async def g(ctx, x, r = None):
+    
+    y = ctx.author.mention
+    c = Gif(y, x)
+    # file = discord.File(y+'.gif')
+    # b = 'attachment://'+y+'.gif'
+    # embed.set_image(url = b)
+    if r == None:
+        embed = discord.Embed(text = y+" "+x, color = discord.Colour.teal())
+    else:
+        embed = discord.Embed(text = y+" "+x+" "+r, color = discord.Colour.teal())
+        
+
+    embed.set_image(url = c)
+    await ctx.send(embed = embed)
+
 
 @client.command()
 async def fb(ctx, team_a, team_b):
@@ -161,4 +201,4 @@ async def delete(ctx,amount=2):
 
 
 
-client.run(<API-KEY>)
+client.run("NzUzOTgyNDk3ODQyMzk3MTk1.X1uG6w.4YZkwoz744yvNDlu1A2a1ZtEiqc" )

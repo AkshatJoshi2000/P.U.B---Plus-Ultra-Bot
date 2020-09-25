@@ -2,6 +2,49 @@ import discord,asyncio,random,youtube_dl,string,os
 from discord.ext import commands
 from googleapiclient.discovery import build
 from discord.ext.commands import command
+import ffmpeg
+
+
+ytdl_format_options= {
+    'audioquality':8,
+    'restrictfilenames': True,
+    'format': 'worstaudio',
+    'outtmpl': '{}',
+    'noplaylist': True,
+    'nocheckcertificate': True,
+    'ignoreerrors': True,
+    'logtostderr': False,
+    "extractaudio":True,
+    "audioformat":"opus",
+    'quiet': True,
+    'no_warnings': True,
+    'default_search': 'auto',
+    'source_address': '0.0.0.0' 
+}
+
+stim= {
+    'default_search': 'auto',
+    "ignoreerrors":True,
+    'quiet': True,
+    "no_warnings": True,
+    "simulate": True,  
+    "nooverwrites": True,
+    "keepvideo": False,
+    "noplaylist": True,
+    "skip_download": False,
+    'source_address': '0.0.0.0' 
+}
+
+
+ffmpeg_options = {
+    'options': '-vn',
+    
+}
+
+
+
+
+
 class Downloader(discord.PCMVolumeTransformer):
     def __init__(self,source,*,data,volume=0.5):
         super().__init__(source,volume)
