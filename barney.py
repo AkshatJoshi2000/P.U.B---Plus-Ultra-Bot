@@ -4,7 +4,7 @@ import time
 import json
 from urllib.request import Request,urlopen
 import numpy
-def barney():
+def Barney():
     url = "https://www.scarymommy.com/barney-stinson-quotes/"
     req = Request(url, headers={'User-Agent': 'Mozilla/5.0'})
     p = numpy.random.randint(20,size=1)
@@ -20,8 +20,10 @@ def barney():
         z.append(li)
 
     p = str(z[q])
-    b =p[4:-5]
+    b = p[4:-5]
+
+    name = "- Barney Stinson"
+
     return b
 
-barney()
 
