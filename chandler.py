@@ -4,7 +4,8 @@ import time
 import json
 from urllib.request import Request,urlopen
 import numpy
-def chandler():
+
+def Chandler():
     url = "https://inews.co.uk/light-relief/jokes/friends-chandler-bing-funniest-quotes-jokes-one-liners-25-anniversary-341132"
     req = Request(url, headers={'User-Agent': 'Mozilla/5.0'})
     p = numpy.random.randint(30,size=1)
@@ -24,6 +25,7 @@ def chandler():
     t = z.pop(0)
 
     p = str(z[q])
-    print(p[3:-4])
+    res = p[3:-4]
+    
+    return res
 
-chandler()

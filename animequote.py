@@ -1,7 +1,7 @@
 import requests
 import json
 
-def animequote():
+def Animequote():
     r = requests.get("https://animechanapi.xyz/api/quotes/random")
     x = json.loads(r.content)
     z=[]
@@ -17,4 +17,7 @@ def animequote():
                 
         url = x['data'][i]['anime']
         z.append(url)
-    return z
+    
+    res = str(str(z[0])+" - "+str(z[1]))
+    
+    return res

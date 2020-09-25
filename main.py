@@ -10,6 +10,10 @@ from wiki import wiki_info
 from toss import coinFlip, method
 from weather import weather_res
 from score_scrapper import score
+from nickname import nickn
+from barney import Barney
+from chandler import Chandler
+from animequote import Animequote
 
 cg = CoinGeckoAPI()
 
@@ -19,7 +23,42 @@ client  = commands.Bot(command_prefix = 'kb$')
 async def on_ready():
     print("Bot is ready")
 
+
+@client.event
+async def on_member_join(member: discord.Member):
+    def get_name():
+        n_name = nickn()
+        name_list = []
+        name_list.append(n_name)
+        return name_list
+    x = get_name()
+    a_set = set(x)
+    contains_duplicates = len(x) != len(x)
+    if (contains_duplicates == True):
+        x.pop((-1))
+        x = get_name()
+
+    await member.edit(nick=x[-1])
     
+
+@client.command()
+async def words(ctx):
+    embed = discord.Embed(title = 'WORDS OF WISDOM', color = discord.Colour.magenta())
+    p = np.random.randint(3,size=1)
+    q = p[0]
+
+    if q==0:
+        name = " - Barney Stinson"
+        z = str(Barney()+name)
+    elif q==1:
+        name = " - chandler Bing"
+        z = str(Chandler()+name)
+    elif q==2:
+        z = Animequote()
+
+    embed.add_field(name = "Quote", value = z , inline=True)
+    await ctx.send(embed = embed)
+
 @client.command()
 async def news(ctx,arg):
     embed = discord.Embed(title = "HEADLINES" , color = discord.Colour.green())
