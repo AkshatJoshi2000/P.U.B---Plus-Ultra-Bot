@@ -299,37 +299,6 @@ class MusicPlayer(commands.Cog,name='Music'):
         msg.voice_client.stop()
         return await msg.message.add_reaction(emoji='👍')
 
-    
-
-
-    @commands.has_permissions(manage_channels=True)
-    @command()
-    async def stop(self,msg):
-        
-        if msg.voice_client is None:
-            return await msg.send("Bot is not connect to a voice channel")
-
-        if msg.author.voice is None:
-            return await msg.send("You must be in the same voice channel as the bot")
-
-        if msg.author.voice is not None and msg.voice_client is not None:
-            if  msg.voice_client.is_playing() is True or self.player[msg.guild.id]['queue']:
-                self.player[msg.guild.id]['queue'].clear()
-                self.player[msg.guild.id]['repeat']=False
-                msg.voice_client.stop()
-                return await msg.message.add_reaction(emoji='✅')
-
-            return await msg.send(f"**{msg.author.display_name}, there is no audio currently playing or songs in queue**")
-
-
-    @commands.has_permissions(manage_channels=True)
-    @command(aliases=['get-out','disconnect','leave-voice'])
-    async def leave(self,msg):
-       
-        if msg.author.voice is not None and msg.voice_client is not None:
-            if msg.voice_client.is_playing() is True or self.player[msg.guild.id]['queue']:
-                self.player[msg.guild.id]['queue'].clear()
-                msg.voice_client.stop()
                 return await msg.voice_client.disconnect(), await msg.message.add_reaction(emoji='😄')
             
             return await msg.voice_client.disconnect(), await msg.message.add_reaction(emoji='😄')
@@ -358,8 +327,6 @@ class MusicPlayer(commands.Cog,name='Music'):
             if msg.voice_client.is_paused() is True:
                 msg.voice_client.resume()
                 return await msg.message.add_reaction(emoji='✅')
-
-
 
     @command(name='queue',aliases=['song-list','q','current-songs'])
     async def _queue(self,msg):
