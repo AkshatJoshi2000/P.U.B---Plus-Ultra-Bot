@@ -170,19 +170,25 @@ async def weather(ctx, city, country):
 @client.command()
 async def g(ctx, x, r = None):
     
+    x = x.upper()
+    embed = discord.Embed(title = x, color = discord.Colour.teal())
+    x= x.lower()
+
     y = ctx.author.mention
     c = Gif(y, x)
     # file = discord.File(y+'.gif')
     # b = 'attachment://'+y+'.gif'
     # embed.set_image(url = b)
     if r == None:
-        embed = discord.Embed(text = y+" "+x, color = discord.Colour.teal())
+        embed.add_field(name = "\u200b", value = y+" "+x, inline=True)
     else:
-        embed = discord.Embed(text = y+" "+x+" "+r, color = discord.Colour.teal())
+        embed.add_field(name = "\u200b", value = y+" "+x+" "+r, inline = True)
         
 
     embed.set_image(url = c)
     await ctx.send(embed = embed)
+
+
 
 
 @client.command()
