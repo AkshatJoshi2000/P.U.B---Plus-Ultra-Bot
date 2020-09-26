@@ -3,8 +3,10 @@ import json
 import urllib.request,urllib.parse,urllib.error
 import pprint
 import numpy
-def gif(x, search_term):
-    apikey = <API KEY> 
+
+
+def Gif(x, search_term):
+    apikey = "HQWYO2QG8427" 
     lmt = 20
     p = numpy.random.randint(20,size=1)
     q = p[0]
@@ -31,6 +33,7 @@ def gif(x, search_term):
     else:
         top_8gifs = None
     
-    urllib.request.urlretrieve(z[q],x+'.gif')
+    p = z[q]
+    return p
 
 
