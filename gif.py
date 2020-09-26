@@ -6,7 +6,7 @@ import numpy
 
 
 def Gif(x, search_term):
-    apikey = "HQWYO2QG8427" 
+    apikey = <API-KEY>
     lmt = 20
     p = numpy.random.randint(20,size=1)
     q = p[0]
