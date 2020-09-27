@@ -341,7 +341,7 @@ class MusicPlayer(commands.Cog,name='Music'):
         self.player[msg.guild.id]['repeat']=False
         msg.voice_client.stop()
         return await msg.message.add_reaction(emoji='👍')
-
+    
     
 
 
@@ -373,6 +373,7 @@ class MusicPlayer(commands.Cog,name='Music'):
             if msg.voice_client.is_playing() is True or self.player[msg.guild.id]['queue']:
                 self.player[msg.guild.id]['queue'].clear()
                 msg.voice_client.stop()
+
                 return await msg.voice_client.disconnect(), await msg.message.add_reaction(emoji='😄')
             
             return await msg.voice_client.disconnect(), await msg.message.add_reaction(emoji='😄')
@@ -401,8 +402,6 @@ class MusicPlayer(commands.Cog,name='Music'):
             if msg.voice_client.is_paused() is True:
                 msg.voice_client.resume()
                 return await msg.message.add_reaction(emoji='✅')
-
-
 
     @command(name='queue',aliases=['song-list','q','current-songs'])
     async def _queue(self,msg):

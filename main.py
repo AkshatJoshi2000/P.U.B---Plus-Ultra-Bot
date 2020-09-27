@@ -300,4 +300,3 @@ async def delete(ctx,amount=2):
 
 
 
-client.run(<API-KEY>)
