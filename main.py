@@ -20,6 +20,7 @@ import os
 from dotenv import load_dotenv
 from creepy import story
 from dictionary import Dictionary
+from movies import mov
 
 cg = CoinGeckoAPI()
 
@@ -274,6 +275,24 @@ async def roll(ctx):
     await ctx.send(embed = embed)
 
 
+@client.command()
+async def movie(ctx, *, name):
+    z = mov(name)
+    release_date = z[0]
+    image = z[1]
+    summary = z[2]
+    rating = z[3] + '/10'
+    cast = str(z[4]) + ', ' + str(z[5]) + ', ' + str(z[6]) + ', ' + str(z[7])
+    name = name.upper()
+    embed = discord.Embed(title = name, color = discord.Color.from_rgb(254, 226, 216))
+    embed.set_image(url = image)
+    embed.add_field(name = "Summary", value = summary, inline=False)
+    embed.add_field(name = "IMDb", value = rating, inline=False)
+    embed.add_field(name = "Release Date", value = release_date, inline=False)
+    embed.add_field(name = 'Cast', value = cast, inline = False)
+    
+    embed.set_footer(icon_url = ctx.author.avatar_url, text = f"Requested by {ctx.author.name}")
+    await ctx.send(embed = embed)
 
 @client.command()
 async def delete(ctx,amount=2):
@@ -281,4 +300,4 @@ async def delete(ctx,amount=2):
 
 
 
-client.run("NzUzOTgyNDk3ODQyMzk3MTk1.X1uG6w.4YZkwoz744yvNDlu1A2a1ZtEiqc" )
+client.run(<API-KEY>)
