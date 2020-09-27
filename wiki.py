@@ -2,7 +2,7 @@ import wikipediaapi
 
 def wiki_info(req):
     wiki_wiki = wikipediaapi.Wikipedia('en')
-    wiki_page = wiki_wiki.page(subject)
+    wiki_page = wiki_wiki.page(req)
     try:
         if(wiki_page.exists):
             y = wiki_page.summary
@@ -15,6 +15,7 @@ def wiki_info(req):
         else:
             x = "x_x 404 x_x"
     except:
-        x = "x_x Too much data x_x"
+        x = "x_x Something went Wrong x_x"
 
     return x
+

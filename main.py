@@ -18,6 +18,8 @@ from gif import Gif
 import discord,asyncio,youtube_dl
 import os
 from dotenv import load_dotenv
+from creepy import story
+from dictionary import Dictionary
 
 cg = CoinGeckoAPI()
 
@@ -121,11 +123,29 @@ async def cprice(ctx, crypto):
 
     
 @client.command()
-async def wiki(ctx, subject):
-    embed = discord.Embed(title = " " , color = discord.Colour.red())
+async def wiki(ctx,*, subject):
+    subject = subject.upper()
+    em = discord.Embed(title = subject , color = discord.Colour.red())
+    subject = subject.lower()
+    await ctx.send(embed = em)
+
     y = wiki_info(subject)
+
+    str_count = 0
+    end_count=1999
+    for i in range(int((len(y)/1999)+1)):
+        if end_count > len(y):
+            await ctx.send(y[str_count :])
+            break
+        await ctx.send(y[str_count : end_count]+'-')
+        if end_count == len(y):
+            break
+        str_count +=1999
+        end_count += 1999
+
+    embed = discord.Embed(title = " " , color = discord.Colour.red())
     embed.set_footer(icon_url = ctx.author.avatar_url, text = f"Requested by {ctx.author.name}")
-    await ctx.send(x)
+
     await ctx.send(embed = embed)
     
     
@@ -201,6 +221,60 @@ async def fb(ctx, team_a, team_b):
     embed.set_footer(icon_url = ctx.author.avatar_url, text = f"Requested by {ctx.author.name}")
     await ctx.send(embed = embed)
  
+
+@client.command()
+async def creepy(ctx):
+    s = story()
+    story_title = str(s[0])
+    story_content = str(s[1])
+    embed = discord.Embed(title  = story_title, color = discord.Colour.dark_red())
+    await ctx.send(embed = embed)
+    
+    str_count = 0
+    end_count=1999
+    for i in range(int((len(story_content)/1999)+1)):
+        if end_count > len(story_content):
+            await ctx.send(story_content[str_count :])
+            break
+        await ctx.send(story_content[str_count : end_count]+'-')
+        if end_count == len(story_content):
+            break
+        str_count +=1999
+        end_count += 1999
+
+
+@client.command()
+async def meaning(ctx, word):
+    try:
+        word = word.upper()
+        embed = discord.Embed(title = word, color = discord.Colour.gold())
+        word = word.lower()
+
+        val = Dictionary(word)
+        definition = val['list'][0]['definition']
+        example = val['list'][0]['example']
+        embed.add_field(name = "Meaning", value = definition, inline= False)
+        embed.add_field(name = "Example", value = example, inline = True)
+        embed.set_footer(icon_url = ctx.author.avatar_url, text = f"Requested by {ctx.author.name}")
+
+        await ctx.send(embed = embed)
+    except:
+        embed = discord.Embed(title = "Error 404", color = discord.Colour.gold())
+        embed.set_footer(icon_url = ctx.author.avatar_url, text = f"Requested by {ctx.author.name}")        
+
+        await ctx.send(embed=embed)
+
+@client.command()
+async def roll(ctx):
+    p = np.random.randint(low = 1, high = 6,size=1)
+    embed = discord.Embed(title = " ", color = discord.Colour.gold())
+    embed.add_field(name = "Dice",
+                    value = f"The number is **{p}**")
+    
+    await ctx.send(embed = embed)
+
+
+
 @client.command()
 async def delete(ctx,amount=2):
     await ctx.channel.purge(limit = amount)
