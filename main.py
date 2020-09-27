@@ -299,4 +299,4 @@ async def delete(ctx,amount=2):
     await ctx.channel.purge(limit = amount)
 
 
-
+client.run(<API-KEY>)
