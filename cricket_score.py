@@ -9,7 +9,7 @@ def score(TeamA= 'Cricket Score', TeamB=None):
     chrome_options = Options()
     chrome_options.add_argument("--headless")
     chrome_options.add_argument("--window-size=1920x1080")
-    chrome_driver = os.getcwd() +"\\chromedriver.exe"
+    chrome_driver = "C:\Program Files\chromedriver.exe"
     driver = webdriver.Chrome(options=chrome_options, executable_path=chrome_driver)
 
     driver.get("https://www.google.com")
@@ -62,4 +62,5 @@ def score(TeamA= 'Cricket Score', TeamB=None):
             except NoSuchElementException:
                 date2= (' match to be held on '+ driver.find_element_by_xpath('//*[@id="sports-app"]/div/div[2]/div/table/tbody/tr/td[1]/div/div/div/table/tbody/tr[2]/td[2]/div/div/div/div').text)
                 return('%s vs %s'%(TeamA, TeamB), date2)
-print(score())
+
+print(score("mi", "rcb"))
