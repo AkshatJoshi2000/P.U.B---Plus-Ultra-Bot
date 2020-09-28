@@ -16,7 +16,6 @@ def Barney():
     ol = title.find('ol')
     z=[]
     for li in ol:
-
         z.append(li)
 
     p = str(z[q])
