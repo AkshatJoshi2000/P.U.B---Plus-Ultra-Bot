@@ -16,16 +16,13 @@ def Chandler():
     title = soup.find('div',attrs = {'class' : 'article-padding article-content'})
     ol = title.findAll('p')
     z=[]
-    for li in ol:
-
+   for li in ol:
+        li = li.text
         z.append(li)
     
     y = z.pop(0)
     s =z.pop(0) 
     t = z.pop(0)
 
-    p = str(z[q])
-    res = p[3:-4]
-    
+    res = str(z[q])
     return res
-
