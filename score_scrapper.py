@@ -39,7 +39,7 @@ def score(TeamA, TeamB):
         except NoSuchElementException:
             res = 'Match is scheduled for %s' %driver.find_element_by_xpath('//*[@id="sports-app"]/div/div[2]/div/div/div/div/div[1]/div[1]/div/span[2]').text
 
-    driver.quit()
+    driver.quit(1)
     
     return res
 
