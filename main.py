@@ -8,7 +8,7 @@ from graph import *
 from pycoingecko import CoinGeckoAPI
 from wiki import wiki_info
 from toss import coinFlip, method
-from weather import weather_res
+from weather import weather_res, get_part_of_day
 from score_scrapper import score
 from nickname import nickn
 from barney import Barney
@@ -21,6 +21,7 @@ from dotenv import load_dotenv
 from creepy import story
 from dictionary import Dictionary
 from movies import mov
+from crypto_logo_img import logo
 
 cg = CoinGeckoAPI()
 
@@ -97,10 +98,11 @@ async def news(ctx,arg):
 
     
 @client.command()
-async def cprice(ctx, crypto):
+async def cprice(ctx, *, crypto):
     crypto = crypto.upper()
     embed = discord.Embed(title = crypto , color = discord.Colour.dark_blue())
     crypto = crypto.lower()
+    l = logo(crypto)
     x = cg.get_price(ids= crypto, vs_currencies='usd,eur,inr', include_market_cap='true', include_24hr_vol='true', include_24hr_change='true', include_last_updated_at='true')
     usd = str(x[crypto]['usd'])+' USD'
     eur = str(x[crypto]['eur'])+' EUR'
@@ -112,13 +114,14 @@ async def cprice(ctx, crypto):
     z = ctx.author.name
     # g = crypto_g(crypto,z)
 
-    embed.add_field(name = "USD", value = usd, inline = True )
-    embed.add_field(name = "EUR", value= eur, inline = True)
-    embed.add_field(name = "INR", value= inr, inline = True)
-    embed.add_field(name = "MARKET CAP", value= usd_market_cap, inline = True)
-    embed.add_field(name = "24H VOL", value= usd_24h_vol, inline = True)
-    embed.add_field(name = "24H CHANGE", value= usd_24h_change, inline = True)
-    embed.set_image(url=g)
+    embed.set_thumbnail(url = l)
+    embed.add_field(name = "USD", value = usd, inline = False )
+    embed.add_field(name = "EUR", value= eur, inline = False)
+    embed.add_field(name = "INR", value= inr, inline = False)
+    embed.add_field(name = "MARKET CAP", value= usd_market_cap, inline = False)
+    embed.add_field(name = "24H VOL", value= usd_24h_vol, inline = False)
+    embed.add_field(name = "24H CHANGE", value= usd_24h_change, inline = False)
+  
     embed.set_footer(icon_url = ctx.author.avatar_url, text = f"Requested by {ctx.author.name}")
     await ctx.send(embed=embed)
 
@@ -170,21 +173,30 @@ async def toss(ctx, member: discord.Member):
 
 
 @client.command()
-async def weather(ctx, city, country):
-    embed = discord.Embed(title = "WEATHER", color = discord.Colour.dark_green())
+async def weather(ctx,city, *, country):
+
     city = str(city)
     country = str(country)
     json_data_2 = weather_res(city, country)
+
+    icon = json_data_2['weather'][0]['icon']
+    icon_link = "http://openweathermap.org/img/wn/" + icon + "@2x.png"
+
     weather_type = str(json_data_2['weather'][0]['main'])
-    temperature = str(json_data_2['main']['temp']) + '°C'
-    feel_like = str(json_data_2['main']['feels_like']) + '°C'
-    min_temp = str(json_data_2['main']['temp_min']) + '°C'
+    temperature = str(json_data_2['main']['temp']) + ' °C'
+    feel_like = str(json_data_2['main']['feels_like']) + ' °C'
+    min_temp = str(json_data_2['main']['temp_min']) + ' °C'
     max_temp = str(json_data_2['main']['temp_max']) + ' °C'
+    humidity = str(json_data_2['main']['humidity']) + ' %'
+    city = city.upper() + "'S"
+    embed = discord.Embed(title = city + " WEATHER", color = discord.Colour.dark_green())
+    embed.set_thumbnail(url = icon_link)
     embed.add_field(name = "CATEGORY", value = weather_type, inline = False )
     embed.add_field(name = "TEMP", value = temperature, inline = True)
-    embed.add_field(name = "FEELS LIKE", value = feel_like, inline = True)
-    embed.add_field(name = "MIN_TEMP", value = min_temp, inline = True)
+    embed.add_field(name = "FEELS LIKE", value = feel_like, inline = True )
+    embed.add_field(name = "MIN_TEMP", value = min_temp, inline = False)
     embed.add_field(name = "MAX_TEMP", value = max_temp, inline = True)
+    embed.add_field(name = "HUMIDITY", value = humidity, inline = True)
     embed.set_footer(icon_url = ctx.author.avatar_url, text = f"Requested by {ctx.author.name}")
     await ctx.send(embed = embed)
 
@@ -300,4 +312,4 @@ async def delete(ctx,amount=2):
 
 
 
-client.run(<API-KEY>)
+client.run("NzUzOTgyNDk3ODQyMzk3MTk1.X1uG6w.4YZkwoz744yvNDlu1A2a1ZtEiqc" )

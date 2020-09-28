@@ -5,7 +5,7 @@ def nickn():
     url = "https://www.generatormix.com/random-anime-character-generator"
 
     response = requests.get(url) # opens the URL
-    html =   response.content # returns the content of the page
+    html = response.content # returns the content of the page
 
     z = []
 
