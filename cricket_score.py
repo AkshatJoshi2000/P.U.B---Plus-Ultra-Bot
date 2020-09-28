@@ -23,10 +23,10 @@ def score(TeamA= 'Cricket Score', TeamB=None):
             teams = (driver.find_element_by_xpath('//*[@id="sports-app"]/div/div[3]/div/div/div/div/div[1]/div[2]/div[1]/div/div[1]/div[2]/div/span').text +' vs ' + driver.find_element_by_xpath('//*[@id="sports-app"]/div/div[3]/div/div/div/div/div[1]/div[2]/div[1]/div/div[3]/div[2]/div/span').text)
             score=(driver.find_element_by_xpath('//*[@id="sports-app"]/div/div[3]/div/div/div/div/div[1]/div[2]/div[1]/div/div[1]/div[2]/div/span').text + '-' + driver.find_element_by_xpath('//*[@id="sports-app"]/div/div[3]/div/div/div/div/div[1]/div[2]/div[1]/div/div[2]/div/div[1]/div/div[1]').text +' '+ driver.find_element_by_xpath('//*[@id="sports-app"]/div/div[3]/div/div/div/div/div[1]/div[2]/div[1]/div/div[3]/div[2]/div/span').text + '-' + driver.find_element_by_xpath('//*[@id="sports-app"]/div/div[3]/div/div/div/div/div[1]/div[2]/div[1]/div/div[2]/div/div[2]/div[1]/div').text + ' '+ driver.find_element_by_xpath('//*[@id="sports-app"]/div/div[3]/div/div/div/div/div[1]/div[2]/div[2]/div[1]/div/span[1]').text)
             if driver.find_element_by_xpath('//*[@id="sports-app"]/div/div[3]/div/div/div/div/div[1]/div[2]/div[1]/div/div[2]/div/div[2]/div/div[1]').text == 'Yet to bat':
-                overs = 'no of overs rcb - ' + driver.find_element_by_xpath('//*[@id="sports-app"]/div/div[3]/div/div/div/div/div[1]/div[2]/div[1]/div/div[2]/div/div[1]/div/div[2]').text
+                overs = driver.find_element_by_xpath('//*[@id="sports-app"]/div/div[3]/div/div/div/div/div[1]/div[2]/div[1]/div/div[2]/div/div[1]/div/div[2]').text
             else:
-                overs = 'no of overs mi - ' + driver.find_element_by_xpath('//*[@id="sports-app"]/div/div[3]/div/div/div/div/div[1]/div[2]/div[1]/div/div[2]/div/div[2]/div/div[2]').text
-            run_rate = 'run rate - '+ driver.find_element_by_xpath('//*[@id="sports-app"]/div/div[3]/div/div/div/div/div[1]/div[2]/div[2]/div[1]/div/span[2]/span[2]').text
+                overs = driver.find_element_by_xpath('//*[@id="sports-app"]/div/div[3]/div/div/div/div/div[1]/div[2]/div[1]/div/div[2]/div/div[2]/div/div[2]').text
+            run_rate = + driver.find_element_by_xpath('//*[@id="sports-app"]/div/div[3]/div/div/div/div/div[1]/div[2]/div[2]/div[1]/div/span[2]/span[2]').text
             return (teams, score, overs, run_rate )
 
         except NoSuchElementException:
@@ -47,20 +47,25 @@ def score(TeamA= 'Cricket Score', TeamB=None):
     try:
         r_score = driver.find_element_by_xpath('//*[@id="sports-app"]/div/div[2]/div/div/div/div/div[1]/div[2]/div[1]/div/div[2]/div/div[1]/div/div[1]')
         l_score=driver.find_element_by_xpath('/html/body/div[7]/div[2]/div[10]/div[1]/div[2]/div/div[2]/div[2]/div/div/div[1]/div/div/div[1]/div/div/div/div/div/div[2]/div/div/div/div/div[1]/div[2]/div[1]/div/div[2]/div/div[2]/div/div[1]')
-        out= '%s vs %s'%(TeamA, TeamB),' --> ','%s - %s'%(r_score.text, l_score.text),' - ', driver.find_element_by_xpath('//*[@id="sports-app"]/div/div[2]/div/div/div/div/div[1]/div[2]/div[2]/div[1]/div').text, '-- next match is on '+ driver.find_element_by_xpath('//*[@id="sports-app"]/div/div[3]/div/table/tbody/tr/td[1]/div/div/div/table/tbody/tr[2]/td[2]/div/div/div/div').text
-        return(out[0], out[1], out[2], out[3], out[4], out[5])
+        out= '%s vs %s'%(TeamA, TeamB),'%s - %s'%(r_score.text, l_score.text), driver.find_element_by_xpath('//*[@id="sports-app"]/div/div[2]/div/div/div/div/div[1]/div[2]/div[2]/div[1]/div').text, driver.find_element_by_xpath('//*[@id="sports-app"]/div/div[3]/div/table/tbody/tr/td[1]/div/div/div/table/tbody/tr[2]/td[2]/div/div/div/div').text
+        return out[0], out[1], out[2], out[3], out[4] #Teams, Score, Result, Next Match
     except NoSuchElementException:
         try:
             r_score_table = driver.find_element_by_xpath('//*[@id="sports-app"]/div/div[2]/div/table/tbody/tr/td[1]/div/div/div/table/tbody/tr[3]/td[2]/div[2]/div/div[1]').text
             l_score_table = driver.find_element_by_xpath('//*[@id="sports-app"]/div/div[2]/div/table/tbody/tr/td[1]/div/div/div/table/tbody/tr[4]/td[2]/div[2]/div/div').text
-            out_2 = '%s vs %s'%(TeamA, TeamB),' --> ','%s - %s'%(r_score_table, l_score_table), ' - ', driver.find_element_by_xpath('//*[@id="sports-app"]/div/div[2]/div/table/tbody/tr/td[1]/div/div/div/table/tbody/tr[5]/td[1]/div/span').text, '-- next match is on '+ driver.find_element_by_xpath('//*[@id="sports-app"]/div/div[2]/div/table/tbody/tr/td[2]/div/div/div/table/tbody/tr[2]/td[2]/div/div/div/div').text
-            return out_2[0],out_2[1], out_2[2], out_2[3], out_2[4], out_2[5]
-        except NoSuchElementException:
+            out_2 = '%s vs %s'%(TeamA, TeamB),'%s - %s'%(r_score_table, l_score_table), driver.find_element_by_xpath('//*[@id="sports-app"]/div/div[2]/div/table/tbody/tr/td[1]/div/div/div/table/tbody/tr[5]/td[1]/div/span').text, driver.find_element_by_xpath('//*[@id="sports-app"]/div/div[2]/div/table/tbody/tr/td[2]/div/div/div/table/tbody/tr[2]/td[2]/div/div/div/div').text
+            return out_2[0],out_2[1], out_2[2], out_2[3] #Teams, Score, Result, Next Match
             try:
-                date = (' match to be held on '+ driver.find_element_by_xpath('//*[@id="sports-app"]/div/div[2]/div/div/div/div/div[1]/div[1]/div/span[2]').text)
-                return('%s vs %s'%(TeamA, TeamB), date)
+                date = (+ driver.find_element_by_xpath('//*[@id="sports-app"]/div/div[2]/div/div/div/div/div[1]/div[1]/div/span[2]').text)
+                return('%s vs %s'%(TeamA, TeamB), date) #Teams, Date of Match
             except NoSuchElementException:
+<<<<<<< HEAD
                 date2= (' match to be held on '+ driver.find_element_by_xpath('//*[@id="sports-app"]/div/div[2]/div/table/tbody/tr/td[1]/div/div/div/table/tbody/tr[2]/td[2]/div/div/div/div').text)
                 return('%s vs %s'%(TeamA, TeamB), date2)
 
 print(score("mi", "rcb"))
+=======
+                date2= (driver.find_element_by_xpath('//*[@id="sports-app"]/div/div[2]/div/table/tbody/tr/td[1]/div/div/div/table/tbody/tr[2]/td[2]/div/div/div/div').text)
+                return('%s vs %s'%(TeamA, TeamB), date2) #Teams, Date Of Match
+print(score())
+>>>>>>> 6be5a5f28963169f90f5180c748533075ca6eb74
