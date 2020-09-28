@@ -9,7 +9,7 @@ def score(TeamA= 'Cricket Score', TeamB=None):
     chrome_options = Options()
     chrome_options.add_argument("--headless")
     chrome_options.add_argument("--window-size=1920x1080")
-    chrome_driver = os.getcwd() +"\\chromedriver.exe"
+    chrome_driver = "C:\Program Files\chromedriver.exe"
     driver = webdriver.Chrome(options=chrome_options, executable_path=chrome_driver)
 
     driver.get("https://www.google.com")
