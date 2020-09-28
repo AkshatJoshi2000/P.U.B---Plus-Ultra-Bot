@@ -3,7 +3,7 @@ from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.common.keys import Keys
 from selenium.common.exceptions import NoSuchElementException
 import os
-import timeee
+import time
 
 def score(TeamA, TeamB):
     chrome_options = Options()
