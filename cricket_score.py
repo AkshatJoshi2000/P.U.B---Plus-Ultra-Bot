@@ -59,13 +59,6 @@ def score(TeamA= 'Cricket Score', TeamB=None):
                 date = (+ driver.find_element_by_xpath('//*[@id="sports-app"]/div/div[2]/div/div/div/div/div[1]/div[1]/div/span[2]').text)
                 return('%s vs %s'%(TeamA, TeamB), date) #Teams, Date of Match
             except NoSuchElementException:
-<<<<<<< HEAD
-                date2= (' match to be held on '+ driver.find_element_by_xpath('//*[@id="sports-app"]/div/div[2]/div/table/tbody/tr/td[1]/div/div/div/table/tbody/tr[2]/td[2]/div/div/div/div').text)
-                return('%s vs %s'%(TeamA, TeamB), date2)
-
-print(score("mi", "rcb"))
-=======
                 date2= (driver.find_element_by_xpath('//*[@id="sports-app"]/div/div[2]/div/table/tbody/tr/td[1]/div/div/div/table/tbody/tr[2]/td[2]/div/div/div/div').text)
                 return('%s vs %s'%(TeamA, TeamB), date2) #Teams, Date Of Match
 print(score())
->>>>>>> 6be5a5f28963169f90f5180c748533075ca6eb74
