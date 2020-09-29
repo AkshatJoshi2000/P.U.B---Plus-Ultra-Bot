@@ -9,7 +9,7 @@ def score(TeamA= 'Cricket Score', TeamB=None):
     chrome_options = Options()
     chrome_options.add_argument("--headless")
     chrome_options.add_argument("--window-size=1920x1080")
-    chrome_driver = os.getcwd() +"\\chromedriver.exe"
+    chrome_driver = "C:\Program Files\chromedriver.exe"
     driver = webdriver.Chrome(options=chrome_options, executable_path=chrome_driver)
 
     driver.get("https://www.google.com")
@@ -41,7 +41,7 @@ def score(TeamA= 'Cricket Score', TeamB=None):
                     result = driver.find_element_by_xpath('//*[@id="sports-app"]/div/div[3]/div/div/div/div/div[1]/div[2]/div[2]/div[1]/div').text
                     return teams_, score_, result
                 except:
-                    return "No matches live/today"
+                    return "No ongoing matches"
 
     else:
         search.send_keys(TeamA,' vs ',TeamB)
