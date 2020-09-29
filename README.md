@@ -52,7 +52,7 @@ This will display help for the tool. Here are all the endpoints it supports.
 | /fb                     | Returns soccer updates                                  | pub/fb <team 1> <team 2>                           |
 | /cric                   | return cricket updates                                  | pub/cric <team 1> <team 2> (optional)              |
 | /creepy                 | Fetched you a random creepy story                       | pub/creepy                                         |
-| -  m                    | Filter content length in the output                     | httpx -content-length -fl 0,43                     |
+| /animetoday             | Returns a random anime with synopsis                    | pub/animetoday                                     |
 | -status-code            | Prints status code in the output                        | httpx -status-code                                 |
 
 
