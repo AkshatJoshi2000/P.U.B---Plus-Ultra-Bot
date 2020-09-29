@@ -2,11 +2,10 @@
 
 <div align="center">
   
-  <h1 align="center">
+  <p align="center">
     <img src="Assets/Plus Ultra Bot.png" alt="PLUS ULTRA" width = 500px, height = 400px></a>
-   
    <p align="center"><strong>HTTPX</strong> <em>- A modern-day all feature bot.</em></p>
-  </h1>
+  </p>
 
 
   ![GitHub All Releases](https://img.shields.io/github/downloads/AkshatJoshi2000/TOP-NEWS-STORIES/total?logo=Github&logoColor=%09%23FF0000&style=flat-square)
