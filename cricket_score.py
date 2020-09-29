@@ -66,4 +66,4 @@ def score(TeamA= 'Cricket Score', TeamB=None):
                 date2= (driver.find_element_by_xpath('//*[@id="sports-app"]/div/div[2]/div/table/tbody/tr/td[1]/div/div/div/table/tbody/tr[2]/td[2]/div/div/div/div').text)
                 return('%s vs %s'%(TeamA, TeamB), date2) #Teams, Date Of Match
 
-print(score('rcb', 'mi'))
+print(score())
