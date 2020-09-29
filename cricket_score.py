@@ -27,13 +27,15 @@ def score(TeamA= 'Cricket Score', TeamB=None):
             else:
                 overs = driver.find_element_by_xpath('//*[@id="sports-app"]/div/div[3]/div/div/div/div/div[1]/div[2]/div[1]/div/div[2]/div/div[2]/div/div[2]').text
             run_rate = + driver.find_element_by_xpath('//*[@id="sports-app"]/div/div[3]/div/div/div/div/div[1]/div[2]/div[2]/div[1]/div/span[2]/span[2]').text
-            return (teams, score, overs, run_rate )
+            return (teams, score, overs, run_rate, ' ', ' ' )
 
         except NoSuchElementException:
             #time1 is the time today's match is scheduled
             try:
+                teams__ = (driver.find_element_by_xpath('//*[@id="sports-app"]/div/div[3]/div/div/div/div/div[1]/div[2]/div[1]/div/div[1]/div[2]/div/span').text +' vs ' + driver.find_element_by_xpath('//*[@id="sports-app"]/div/div[3]/div/div/div/div/div[1]/div[2]/div[1]/div/div[3]/div[2]/div/span').text)
+
                 time1 = (' is scheduled at ' + driver.find_element_by_xpath('//*[@id="sports-app"]/div/div[3]/div/div/div/div/div[1]/div[1]/div/span[2]').text)
-                return teams, time1
+                return teams__, time1
             except NoSuchElementException:
                 try:
                     teams_= (driver.find_element_by_xpath('//*[@id="sports-app"]/div/div[3]/div/div/div/div/div[1]/div[2]/div[1]/div/div[1]/div[2]/div/span').text +' vs ' + driver.find_element_by_xpath('//*[@id="sports-app"]/div/div[3]/div/div/div/div/div[1]/div[2]/div[1]/div/div[3]/div[2]/div/span').text)
@@ -57,13 +59,13 @@ def score(TeamA= 'Cricket Score', TeamB=None):
             r_score_table = driver.find_element_by_xpath('//*[@id="sports-app"]/div/div[2]/div/table/tbody/tr/td[1]/div/div/div/table/tbody/tr[3]/td[2]/div[2]/div/div[1]').text
             l_score_table = driver.find_element_by_xpath('//*[@id="sports-app"]/div/div[2]/div/table/tbody/tr/td[1]/div/div/div/table/tbody/tr[4]/td[2]/div[2]/div/div').text
             out_2 = '%s vs %s'%(TeamA, TeamB),'%s - %s'%(r_score_table, l_score_table), driver.find_element_by_xpath('//*[@id="sports-app"]/div/div[2]/div/table/tbody/tr/td[1]/div/div/div/table/tbody/tr[5]/td[1]/div/span').text, driver.find_element_by_xpath('//*[@id="sports-app"]/div/div[2]/div/table/tbody/tr/td[2]/div/div/div/table/tbody/tr[2]/td[2]/div/div/div/div').text, driver.find_element_by_xpath('//*[@id="sports-app"]/div/div[2]/div/table/tbody/tr/td[2]/div/div/div/table/tbody/tr[2]/td[2]/div/div/div/div')
-            return out_2[0],out_2[1], out_2[2], out_2[3], #Teams, Score, Result, Next Match
+            return out_2[0],out_2[1], out_2[2], out_2[3],' ', #Teams, Score, Result, Next Match
         except NoSuchElementException:
             try:
                 date = (driver.find_element_by_xpath('//*[@id="sports-app"]/div/div[2]/div/div/div/div/div[1]/div[1]/div/span[2]').text)
-                return('%s vs %s'%(TeamA, TeamB), date) #Teams, Date of Match
+                return('%s vs %s'%(TeamA, TeamB), date, ' ', ' ', ' ', ' ', ' ') #Teams, Date of Match
             except NoSuchElementException:
                 date2= (driver.find_element_by_xpath('//*[@id="sports-app"]/div/div[2]/div/table/tbody/tr/td[1]/div/div/div/table/tbody/tr[2]/td[2]/div/div/div/div').text)
-                return('%s vs %s'%(TeamA, TeamB), date2) #Teams, Date Of Match
+                return('%s vs %s'%(TeamA, TeamB), date2, ' ', ' ', ' ') #Teams, Date Of Match
 
 print(score())
