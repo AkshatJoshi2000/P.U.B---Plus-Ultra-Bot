@@ -4,9 +4,8 @@
   
   <h1 align="center">
     <img src="Assets/Plus Ultra Bot.png" alt="PLUS ULTRA" width = 500px, height = 400px></a>
-    <br>
-    <br>
-      <p align="center"><strong>HTTPX</strong> <em>- A modern-day all feature bot.</em></p>
+   
+   <p align="center"><strong>HTTPX</strong> <em>- A modern-day all feature bot.</em></p>
   </h1>
 
 
