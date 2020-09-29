@@ -5,18 +5,16 @@ import autoit
 import time
 from mal import Anime
 from mal import AnimeSearch
-def synopsis():
-    driverpth = "C:\\Program Files (x86)\\chromedriver.exe"
 
-    options = Options()
-    options.add_argument("--log-level=3")
-    options.add_argument("--silent")
-    #options.add_argument("--headless")
-    options.add_argument("--no-sandbox")
-    options.add_argument("--disable-logging")
-    options.add_argument("--mute-audio")
-    options.add_argument('--user-agent=Mozilla/5.0 (iPhone; CPU iPhone OS 10_3 like Mac OS X) AppleWebKit/602.1.50 (KHTML, like Gecko) CriOS/56.0.2924.75 Mobile/14E5239e Safari/602.1')
-    driver = webdriver.Chrome(executable_path=driverpth,options=options)
+
+def synopsis():
+    driverpth = "C:\\Program Files\chromedriver.exe"
+
+    chrome_options = Options()
+    chrome_options.add_argument("--headless")
+    chrome_options.add_argument("--window-size=1920x1080")
+    chrome_driver = "C:\Program Files\chromedriver.exe"
+    driver = webdriver.Chrome(options=chrome_options, executable_path=chrome_driver)
     driver.get('https://www.randomanime.org/custom-list/')
 
     time.sleep(2)

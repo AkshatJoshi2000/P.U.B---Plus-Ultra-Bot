@@ -5,7 +5,7 @@ from selenium.common.exceptions import NoSuchElementException
 import os
 import time
 
-def score(TeamA, TeamB):
+def fbscore(TeamA, TeamB):
     chrome_options = Options()
     chrome_options.add_argument("--headless")
     chrome_options.add_argument("--window-size=1920x1080")
