@@ -22,7 +22,7 @@
 </h5>
 </div>
 
-# Usage
+# Endpoints
 
 ```sh
 pub/help
