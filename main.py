@@ -329,7 +329,21 @@ async def remmin(ctx,time=None,*, amount: str):
         embed.add_field(name = f"Requested by {ctx.author.name}", value = amount , inline=True)
         await ctx.send(embed = embed)
         asyncio.get_event_loop()
+
         
+@client.command(name="animetoday")
+async def anime(ctx):
+    fin = photo()
+    
+    embed = discord.Embed(title = "Anime of the Day!", color = discord.Color.from_rgb(254, 226, 216))
+    embed.set_image(url = fin[0])
+    embed.add_field(name = "Anime", value = fin[1], inline=False)
+    
+    embed.set_footer(icon_url = ctx.author.avatar_url, text = f"Requested by {ctx.author.name}")
+    await ctx.send(embed = embed)
+    await ctx.send(fin[2])
+    
+    
 @client.command()
 async def delete(ctx,amount=2):
     await ctx.channel.purge(limit = amount)
