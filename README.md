@@ -4,7 +4,7 @@
   
   <h3 align="center">
     <img src="Assets/Plus Ultra Bot.png" alt="PLUS ULTRA" width = 500px, height = 350px></a>
-    
+    <br>
    <p align="center" ><strong>P.U.B</strong> <em>- A modern-day all feature bot.</em></p>
   </h3>
 
