@@ -22,6 +22,7 @@ from creepy import story
 from dictionary import Dictionary
 from movies import mov
 from crypto_logo_img import logo
+from AI import photo
 
 cg = CoinGeckoAPI()
 
