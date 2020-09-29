@@ -26,7 +26,7 @@ def score(TeamA= 'Cricket Score', TeamB=None):
                 overs = driver.find_element_by_xpath('//*[@id="sports-app"]/div/div[3]/div/div/div/div/div[1]/div[2]/div[1]/div/div[2]/div/div[1]/div/div[2]').text
             else:
                 overs = driver.find_element_by_xpath('//*[@id="sports-app"]/div/div[3]/div/div/div/div/div[1]/div[2]/div[1]/div/div[2]/div/div[2]/div/div[2]').text
-            run_rate = + driver.find_element_by_xpath('//*[@id="sports-app"]/div/div[3]/div/div/div/div/div[1]/div[2]/div[2]/div[1]/div/span[2]/span[2]').text
+            run_rate = driver.find_element_by_xpath('//*[@id="sports-app"]/div/div[3]/div/div/div/div/div[1]/div[2]/div[2]/div[1]/div/span[2]/span[2]').text
             return (teams, score, overs, run_rate, ' ', ' ' )
 
         except NoSuchElementException:
