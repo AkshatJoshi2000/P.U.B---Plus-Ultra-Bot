@@ -4,9 +4,9 @@
   
   <h3 align="center">
     <img src="Assets/Plus Ultra Bot.png" alt="PLUS ULTRA" width = 500px, height = 350px></a><br>
-   <p align="center" ><strong>P.U.B</strong> <em>- A modern-day all feature bot.</em></p>
+   <p align="center" ><strong>P.U.B</strong> <em>- A modern-day multi-purpose bot.</em></p>
   </h3>
-------------------
+
   ![GitHub All Releases](https://img.shields.io/github/downloads/AkshatJoshi2000/TOP-NEWS-STORIES/total?logo=Github&logoColor=%09%23FF0000&style=flat-square)
   ![GitHub repo size](https://img.shields.io/github/repo-size/AkshatJoshi2000/TOP-NEWS-STORIES?style=flat-square)
   ![GitHub](https://img.shields.io/github/license/AkshatJoshi2000/TOP-NEWS-STORIES)
