@@ -305,7 +305,30 @@ async def movie(ctx, *, name):
     
     embed.set_footer(icon_url = ctx.author.avatar_url, text = f"Requested by {ctx.author.name}")
     await ctx.send(embed = embed)
+    
+   
+@client.command(name="remhr",help="Insert the text you want to be reminded of and the time in minutes")
+async def remhhr(ctx,time=None,*, amount: str):
+    if time==None:
+        await ctx.send("Please insert all the arguements.e.g kb$rem time(in hours) text")
+    else:
+        await asyncio.sleep(int(time)*60*60)
+        embed = discord.Embed(title = 'Reminder!', color = discord.Colour.magenta())
+        embed.add_field(name = f"Requested by {ctx.author.name}", value = amount , inline=True)
+        await ctx.send(embed = embed)
+        asyncio.get_event_loop()
 
+@client.command(name="remmin",help="Insert the text you want to be reminded of and the time in minutes")
+async def remmin(ctx,time=None,*, amount: str):
+    if time==None:
+        await ctx.send("Please insert all the arguements.e.g kb$rem time(in minutes) text")
+    else:
+        await asyncio.sleep(int(time)*60)
+        embed = discord.Embed(title = 'Reminder!', color = discord.Colour.magenta())
+        embed.add_field(name = f"Requested by {ctx.author.name}", value = amount , inline=True)
+        await ctx.send(embed = embed)
+        asyncio.get_event_loop()
+        
 @client.command()
 async def delete(ctx,amount=2):
     await ctx.channel.purge(limit = amount)
