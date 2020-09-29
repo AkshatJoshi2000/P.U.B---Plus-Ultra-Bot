@@ -17,11 +17,9 @@
   ![GitHub commits since latest release (by date)](https://img.shields.io/github/commits-since/AkshatJoshi2000/P.U.B---Plus-Ultra-Bot/latest)
   ![Github All Contributors](https://img.shields.io/github/all-contributors/AkshatJoshi2000/P.U.B---Plus-Ultra-Bot)
   
-  <br>
-  <p align = "left">Plus Ultra Bot (P.U.B) is a next-generation fully featured multi-purpose discord bot which aims to cover the small aspects thus making hangingout with family and friends more convenient and fun.
 
-
-</p>
+  <h5 align = "left">Plus Ultra Bot (P.U.B) is a next-generation fully featured multi-purpose discord bot which aims to cover the small aspects thus making hangingout with family and friends more convenient and fun.
+</h5>
 
 </div>
 
