@@ -1,5 +1,8 @@
 from selenium import webdriver
-from bs4 import BeautifulSoup
+from selenium import webdriver
+from selenium.webdriver.chrome.options import *
+from selenium.webdriver.common.keys import Keys
+import bs4
 import requests
 import urllib.request
 import time
@@ -10,45 +13,27 @@ from AD import synopsis
 def photo():
     z=synopsis()
     site = 'https://www.google.com/search?tbm=isch&q='+z[0]+" anime 4k wallpapers"
-    driverpth = "C:\\Program Files (x86)\\chromedriver.exe"
 
-
-    #providing driver path
-    driver = webdriver.Chrome(executable_path=driverpth)
-
-    #passing site url
+    chrome_options = Options()
+    chrome_options.add_argument("--headless")
+    chrome_options.add_argument("--window-size=1920x1080")
+    chrome_options.add_argument("--headless")
+    chrome_driver = "C:\Program Files\chromedriver.exe"
+    driver = webdriver.Chrome(options=chrome_options, executable_path=chrome_driver)
     driver.get(site)
 
-
-    #if you just want to download 10-15 images then skip the while loop and just write
-    #driver.execute_script("window.scrollBy(0,document.body.scrollHeight)")
-
-
-    #below while loop scrolls the webpage 7 times(if available)
-
-
-        
     try:
-            #for clicking show more results button
-            driver.find_element_by_xpath("/html/body/div[2]/c-wiz/div[3]/div[1]/div/div/div/div/div[1]/div[1]/div[1]/a[1]/div[1]/img").click()
+        driver.find_element_by_xpath("/html/body/div[2]/c-wiz/div[3]/div[1]/div/div/div/div/div[1]/div[1]/div[1]/a[1]/div[1]/img").click()
     except Exception as e:
         pass
     time.sleep(5)
-        
+ 
+    soup = bs4.BeautifulSoup(driver.page_source, 'html.parser')
 
-    #parsing
-    soup = BeautifulSoup(driver.page_source, 'html.parser')
-
-
-    #closing web browser
     driver.close()
 
-
-    #scraping image urls with the help of image tag and class used for images
     img_tags = soup.find("div",attrs = {'class' : 'v4dQwb'})
-    time.sleep(5)
     x = img_tags.find('a')
-    time.sleep(5)
     y = x.findAll('img')
 
     fin = []
@@ -67,4 +52,3 @@ def photo():
     fin.append(z[0])
     fin.append(z[1])
     return fin
-photo()

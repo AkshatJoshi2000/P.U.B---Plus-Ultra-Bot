@@ -4,12 +4,12 @@ import requests
 import numpy as np
 from news import everything_news
 import datetime
-from graph import *
+from cricket_score import score
 from pycoingecko import CoinGeckoAPI
 from wiki import wiki_info
 from toss import coinFlip, method
-from weather import weather_res, get_part_of_day
-from score_scrapper import score
+from weather import weather_res
+from score_scrapper import fbscore
 from nickname import nickn
 from barney import Barney
 from chandler import Chandler
@@ -17,6 +17,7 @@ from animequote import Animequote
 from gif import Gif
 import discord,asyncio,youtube_dl
 import os
+import json
 from dotenv import load_dotenv
 from creepy import story
 from dictionary import Dictionary
@@ -25,6 +26,8 @@ from crypto_logo_img import logo
 from AI import photo
 
 cg = CoinGeckoAPI()
+
+
 
 client  = commands.Bot(command_prefix = 'kb$')
 
@@ -338,14 +341,67 @@ async def anime(ctx):
     embed = discord.Embed(title = "Anime of the Day!", color = discord.Color.from_rgb(254, 226, 216))
     embed.set_image(url = fin[0])
     embed.add_field(name = "Anime", value = fin[1], inline=False)
-    
+ 
+    await ctx.send(embed = embed)
+    await ctx.send(fin[2]) 
+    em = discord.Embed(title = " ", color = discord.Color.from_rgb(254, 226, 216))
+    em.set_footer(icon_url = ctx.author.avatar_url, text = f"Requested by {ctx.author.name}")
+    await ctx.send(embed = em)
+
+@client.command()
+async def cric(ctx, team_A = None, team_B = None):
+    z = score(team_A, team_B)
+    embed = discord.Embed(title = " ", color = discord.Colour.green())
+    embed.add_field(name = "Overview", value=z)
+
     embed.set_footer(icon_url = ctx.author.avatar_url, text = f"Requested by {ctx.author.name}")
     await ctx.send(embed = embed)
-    await ctx.send(fin[2])
-    
-    
+
 @client.command()
 async def delete(ctx,amount=2):
     await ctx.channel.purge(limit = amount)
 
+ 
+# @client.event
+# async def on_member_join(member):
+#     with open('users.json', 'r') as f:
+#         users = json.load(f)
 
+#     await update(users, member)
+
+#     with open('users.json','w') as f:
+#         json.dump(users, f)
+
+
+# @client.event
+# async def on_message(message):
+#     with open('users.json', 'r') as f:
+#         users = json.load(f)
+
+#     await update(users, message.author)
+#     await add_xp(users, message.author, 2)
+#     await level_up(users, message.author, message.channel)
+
+#     with open('users.json','w') as f:
+#         json.dump(users, f)
+ 
+# async def update(users, user):
+#     if not user.id in users:
+#         users[user.id] = {}
+#         users[user.id]['xp'] = 0
+#         users[user.id]['level'] = 1
+
+# async def add_xp(users, user, exp):
+#     users[user.id]['xp'] += exp
+
+# async def level_up(users, user, channel):
+#     xp = users[user.id]['xp']
+#     lvl_s = users[user.id]['level']
+#     lvl_e = int(xp ** (1/4))
+
+#     if lvl_s < lvl_e:
+#         await client.send_message(channel, '{} has leveled up {}'.format(user.mention, lvl_e))
+#         users[user.id]['level'] = lvl_e
+
+
+client.run("NzUzOTgyNDk3ODQyMzk3MTk1.X1uG6w.4YZkwoz744yvNDlu1A2a1ZtEiqc")
