@@ -5,7 +5,7 @@
   <h3 align="center">
     <img src="Assets/Plus Ultra Bot.png" alt="PLUS ULTRA" width = 500px, height = 350px></a><br>
     <br>
-   <p align="center" ><ins><strong>P.U.B</strong> <em>- A modern-day multi-purpose bot.</em></ins></p>
+   <p align="center" ><ins><strong>P.U.B</strong> <em>- A modern-day multi-purpose discord bot.</em></ins></p>
   </h3>
 
  
@@ -16,5 +16,10 @@
   ![GitHub release (latest by date)](https://img.shields.io/github/v/release/AkshatJoshi2000/TOP-NEWS-STORIES)
   ![GitHub commits since latest release (by date)](https://img.shields.io/github/commits-since/AkshatJoshi2000/P.U.B---Plus-Ultra-Bot/latest)
   ![Github All Contributors](https://img.shields.io/github/all-contributors/AkshatJoshi2000/P.U.B---Plus-Ultra-Bot)
+  
+  <br><br>
+  <p>Plus Ultra Bot (P.U.B) is a next-generation fully featured multi-purpose discord bot which aims to cover the small aspects thus making hangingout with friends more easier and fun.</p>
 
 </div>
+
+
