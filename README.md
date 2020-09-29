@@ -21,6 +21,6 @@
   <h5 align = "left">Plus Ultra Bot (P.U.B) is a next-generation fully featured multi-purpose discord bot which aims to cover the small aspects thus making hanging out with family and friends more convenient and fun.
 </h5>
 </div>
----
+-------
 
 
