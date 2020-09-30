@@ -74,6 +74,6 @@ This will display help for the tool. Here are all the endpoints it supports.
 `pub/weather shibuya japan`
 <br>
 
- <p>"  "<p/><img src="Assets/Shibuya_weather.png" alt="PLUS ULTRA" width = 200px, height = 200px></a>
+ " "<img src="Assets/Shibuya_weather.png" alt="PLUS ULTRA" width = 200px, height = 200px></a>
 
 
