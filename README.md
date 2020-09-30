@@ -35,7 +35,7 @@
   |/song-info     | Returns info regarding the song     | pub/song-info              |
   
 * A reaction reply gif, `pub/g  <gif action> <member>` (member is optional)
-* Random anime nickname - a random animne nickname will be assigned to every new member when they will join the server. 
+* Random anime nickname - a random anime nickname will be assigned to every new member when they will join the server. 
 
 # Endpoints
 
@@ -65,7 +65,7 @@ This will display help for the tool. Here are all the endpoints it supports.
 | /cric                   | return cricket updates                                  | pub/cric <team 1> <team 2> (optional)              |
 | /creepy                 | Fetched you a random creepy story                       | pub/creepy                                         |
 | /animetoday             | Returns a random anime with synopsis                    | pub/animetoday                                     |
-| -status-code            | Prints status code in the output                        | httpx -status-code                                 |
+
 
 
 
