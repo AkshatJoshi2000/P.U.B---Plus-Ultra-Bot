@@ -23,7 +23,19 @@
 </div>
 
 # Features
+<strong>P.U.B</strong> builds on the well established usability  of `discord.py`, and gives you:
 
+* An inbuilt music bot, which gets you your favourite music.
+
+  | Flag          | Description                         | Usage                      |
+  |---------------|-------------------------------------|----------------------------|
+  | /join         | Adds the bot to the voice channel   | pub/join                   |
+  | /play         | Plays and add new songs to the queue| pub/play <name of the song>|
+  | /queu         | Shows the queue                     | pub/queue                  |
+  |/song-info     | Returns info regarding the song     | pub/song-info              |
+  
+* A reaction reply gif, `pub/g  <gif action> <member>` (member is optional)
+* Random anime nickname - a random animne nickname will be assigned to every new member when they will join the server. 
 
 # Endpoints
 
