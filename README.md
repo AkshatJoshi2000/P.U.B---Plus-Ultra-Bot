@@ -72,11 +72,12 @@ This will display help for the tool. Here are all the endpoints it supports.
 ####Weather
 ```
  sh
- `pub/weather shibuya japan`
+ pub/weather shibuya japan
+ ```
 <br>
 
 <img src="Assets/Shibuya_weather.png" alt="PLUS ULTRA" width = 200px, height = 200px></a>  
-```
+</div>
 
 
 
