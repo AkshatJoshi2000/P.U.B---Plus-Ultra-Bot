@@ -334,19 +334,7 @@ async def remmin(ctx,time=None,*, amount: str):
         asyncio.get_event_loop()
 
         
-@client.command(name="animerecommend")
-async def anime(ctx):
-    fin = synopsis()
-    
-    embed = discord.Embed(title = "Anime of the Day!", color = discord.Color.from_rgb(254, 226, 216))
-    embed.set_image(url = fin[0])
-    embed.add_field(name = "Anime", value = fin[1], inline=False)
- 
-    await ctx.send(embed = embed)
-    await ctx.send(fin[2]) 
-    em = discord.Embed(title = " ", color = discord.Color.from_rgb(254, 226, 216))
-    em.set_footer(icon_url = ctx.author.avatar_url, text = f"Requested by {ctx.author.name}")
-    await ctx.send(embed = em)
+
 
 @client.command()
 async def cric(ctx, team_A = None, team_B = None):
