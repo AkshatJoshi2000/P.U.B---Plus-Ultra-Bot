@@ -23,7 +23,7 @@ from creepy import story
 from dictionary import Dictionary
 from movies import mov
 from crypto_logo_img import logo
-from animerecommendation import synopsis
+from animerec import synopsis
 
 cg = CoinGeckoAPI()
 
