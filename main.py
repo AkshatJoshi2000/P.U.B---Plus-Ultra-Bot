@@ -23,7 +23,7 @@ from creepy import story
 from dictionary import Dictionary
 from movies import mov
 from crypto_logo_img import logo
-from AI import photo
+from animerecommendation import synopsis
 
 cg = CoinGeckoAPI()
 
@@ -334,9 +334,9 @@ async def remmin(ctx,time=None,*, amount: str):
         asyncio.get_event_loop()
 
         
-@client.command(name="animetoday")
+@client.command(name="animerecommend")
 async def anime(ctx):
-    fin = photo()
+    fin = synopsis()
     
     embed = discord.Embed(title = "Anime of the Day!", color = discord.Color.from_rgb(254, 226, 216))
     embed.set_image(url = fin[0])
