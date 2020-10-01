@@ -78,9 +78,9 @@ This will display help for the tool. Here are all the endpoints it supports.
 
 
 ```sh
-   pub/weather "san isidro" japan  #City name consisting of more than one word must me written in-between ""             
+   pub/weather "san isidro" peru  #City name consisting of more than one word must me written in-between ""             
  ```
-<img src="Assets/san_isidro.png" alt="PLUS ULTRA" width = 200px, height = 200px></a>
+<img src="Assets/san_isidro.png" alt="PLUS ULTRA" width = 220px, height = 220px></a>
 </div>
 
 
