@@ -18,14 +18,14 @@
   ![Github All Contributors](https://img.shields.io/github/all-contributors/AkshatJoshi2000/P.U.B---Plus-Ultra-Bot)
   
 
-  <h5 align = "left">Plus Ultra Bot (P.U.B) is a next-generation fully featured multi-purpose discord bot which aims to cover the small aspects thus making hanging out with friends and family more convenient and fun.
+  <h5 align = "left">Plus Ultra Bot (P.U.B) is a next-generation fully featured multi-purpose discord bot which aims to cover the small aspects, thus making hanging out with friends and family more convenient and fun.
 </h5>
 </div>
 
 ## Features
 <strong>P.U.B</strong> builds on the well established usability  of `discord.py`, and gives you:
 
-* An inbuilt music bot, which gets you your favourite music.
+* An inbuilt music bot, which gets your favourite music to you.
 
   <img src="Assets/local train song play.png" alt="PLUS ULTRA"></a><br>
    
@@ -51,7 +51,7 @@ This will display help for the tool. Here are all the endpoints it supports.
 | Flag                    | Description                                             | Usage                                              |
 |-------------------------|---------------------------------------------------------|----------------------------------------------------|
 | /help                   | Gives a bot endpoints                                   | pub/help                                           |
-| /news                   | Returns headlines reegarding the input subject          | pub/news <subject>                                 |
+| /news                   | Returns headlines regarding the input subject          | pub/news <subject>                                 |
 | /weather                | Returns weather info of the input city                  | pub/weather <city> <country>                       |
 | /roll                   | Rolls a dice                                            | pub/roll                                           |
 | /toss                   | Tosses a coin                                           | puebab/toss                                        |
@@ -62,10 +62,10 @@ This will display help for the tool. Here are all the endpoints it supports.
 | /meaning                | Gives the mening of the input word                      | pub/meaning <word>                                 |
 | /words                  | Gives a random quote                                    | pub/words                                          |
 | /movie                  | Returns general info regarding the movie                | pub/movie <movie's name>                           |
-| /delete                 | deletes the last test                                   | pub/delete                                         |
+| /delete                 | Deletes the last test                                   | pub/delete                                         |
 | /wiki                   | Gives wiki summary of the input subject                 | pub/wiki <subject>                                 |
 | /fb                     | Returns soccer updates                                  | pub/fb <team 1> <team 2>                           |
-| /cric                   | return cricket updates                                  | pub/cric <team 1> <team 2> (optional)              |
+| /cric                   | Return cricket updates                                  | pub/cric <team 1> <team 2> (optional)              |
 | /creepy                 | Fetched you a random creepy story                       | pub/creepy                                         |
 | /animetoday             | Returns a random anime with synopsis                    | pub/animetoday                                     |
 
@@ -103,7 +103,7 @@ This will display help for the tool. Here are all the endpoints it supports.
  ```sh
    pub/cric           
  ```
- <p>When nothing is passed as a parameter, the bot will return the latest score feed redaring cricket</p>
+ <p>When nothing is passed as a parameter, the bot will return the latest score feed regarding cricket</p>
  <img src="Assets/no parameter cric.png" alt="PLUS ULTRA"></a>
  
 #### Dictionary
