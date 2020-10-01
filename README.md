@@ -81,6 +81,12 @@ This will display help for the tool. Here are all the endpoints it supports.
    pub/weather "san isidro" peru  #City name consisting of more than one word must me written in-between ""             
  ```
 <img src="Assets/san_isidro.png" alt="PLUS ULTRA" width = 205px, height = 200px></a>
+
+#### GIF
+```sh
+   pub/g slap @member  #Can also be used without providing the the member argument           
+ ```
+ <img src="Assets/gif.png" alt="PLUS ULTRA" width = 200px, height = 200px></a>
 </div>
 
 
