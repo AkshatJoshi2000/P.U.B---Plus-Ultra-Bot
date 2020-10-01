@@ -27,7 +27,7 @@
 
 * An inbuilt music bot, which gets you your favourite music.
 
-  <img src="Assets/local train sing play.png" alt="PLUS ULTRA" width = 200px, height = 200px></a><br>
+  <img src="Assets/local train song play.png" alt="PLUS ULTRA"></a><br>
    
 
   | Flag          | Description                         | Usage                      |
