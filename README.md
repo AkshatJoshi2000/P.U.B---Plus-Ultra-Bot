@@ -104,11 +104,11 @@ This will display help for the tool. Here are all the endpoints it supports.
    pub/cric           
  ```
  <p>When nothing is passed as parameter then the bot will return the latest feed redaring cricket</p>
- <img src="Assets/no parameter cric.png" alt="PLUS ULTRA" width = 205px, height = 200px></a>
+ <img src="Assets/no parameter cric.png" alt="PLUS ULTRA" width = 215px, height = 200px></a>
  
 #### News
  ```sh
    pub/news          
  ```
- <img src="Assets/news.png" alt="PLUS ULTRA" width = 205px, height = 200px></a>
+ <img src="Assets/news.png" alt="PLUS ULTRA" width = 400px, height = 400px></a>
 
