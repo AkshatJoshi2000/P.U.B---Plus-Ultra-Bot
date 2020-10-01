@@ -86,7 +86,7 @@ This will display help for the tool. Here are all the endpoints it supports.
 ```sh
    pub/g slap @member  #Can also be used without providing the the member argument           
  ```
- <img src="Assets/gif.png" alt="PLUS ULTRA" width = 200px, height = 200px></a>
+ <img src="Assets/gif.png" alt="PLUS ULTRA" width = 270px, height = 240px></a>
 </div>
 
 
