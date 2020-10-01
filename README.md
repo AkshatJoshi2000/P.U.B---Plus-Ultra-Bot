@@ -22,7 +22,7 @@
 </h5>
 </div>
 
-# Features
+## Features
 <strong>P.U.B</strong> builds on the well established usability  of `discord.py`, and gives you:
 
 * An inbuilt music bot, which gets you your favourite music.
@@ -40,7 +40,7 @@
 * A reaction reply gif, `pub/g  <gif action> <member>` (member is optional)
 * Random anime nickname - a random anime nickname will be assigned to every new member when they will join the server. 
 
-# Endpoints
+## Endpoints
 
 ```sh
 pub/help
@@ -71,7 +71,7 @@ This will display help for the tool. Here are all the endpoints it supports.
 
 <div>
   
-# Examples
+## Examples
 
 #### Weather
 ```sh
@@ -113,10 +113,13 @@ This will display help for the tool. Here are all the endpoints it supports.
  <img src="Assets/meaning.png" alt="PLUS ULTRA"></a>
 
 
-# Contributing to P.U.B
+## Contributing to P.U.B
 
 * Report bugs, mising best practices.
 * Help fixing in bugs.
 * Follow the code structure.
 * Make sure that your changes do not conflict with the core files.
 * Submit pull requests.
+
+## Licence
+This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
