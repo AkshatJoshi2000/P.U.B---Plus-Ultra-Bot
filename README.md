@@ -106,9 +106,17 @@ This will display help for the tool. Here are all the endpoints it supports.
  <p>When nothing is passed as parameter then the bot will return the latest feed redaring cricket</p>
  <img src="Assets/no parameter cric.png" alt="PLUS ULTRA"></a>
  
-#### News
+#### Dictionary
  ```sh
    pub/meaning anemoia          
  ```
  <img src="Assets/meaning.png" alt="PLUS ULTRA"></a>
 
+
+# Contributing to P.U.B
+
+* Report bugs, mising best practices.
+* Help fixing in bugs.
+* Follow the code structure.
+* Make sure that your changes do not conflict with the core files.
+* Submit pull requests.
