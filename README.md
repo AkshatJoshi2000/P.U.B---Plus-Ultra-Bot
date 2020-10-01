@@ -92,5 +92,23 @@ This will display help for the tool. Here are all the endpoints it supports.
  <img src="Assets/gif.png" alt="PLUS ULTRA" width = 270px, height = 240px></a>
 </div>
 
-
+#### Cricket Score
+```sh
+   pub/cric csk mi           
+ ```
+ <p>When the name of both the teams is passed as a parameter, the match summary of their previous match and the date of their next match is displayed</p>
+ <img src="Assets/csk vs mi (parameter).png" alt="PLUS ULTRA" width = 205px, height = 200px></a>
+ 
+ 
+ ```sh
+   pub/cric           
+ ```
+ <p>When nothing is passed as parameter then the bot will return the latest feed redaring cricket</p>
+ <img src="Assets/no parameter cric.png" alt="PLUS ULTRA" width = 205px, height = 200px></a>
+ 
+#### News
+ ```sh
+   pub/news          
+ ```
+ <img src="Assets/news.png" alt="PLUS ULTRA" width = 205px, height = 200px></a>
 
