@@ -67,9 +67,10 @@ This will display help for the tool. Here are all the endpoints it supports.
 | /animetoday             | Returns a random anime with synopsis                    | pub/animetoday                                     |
 
 <div>
-#Examples
+  
+# Examples
 
-####Weather
+#### Weather
 ```sh
    pub/weather shibuya japan
  ```
