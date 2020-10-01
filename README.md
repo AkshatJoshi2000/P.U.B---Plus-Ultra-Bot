@@ -18,7 +18,7 @@
   ![Github All Contributors](https://img.shields.io/github/all-contributors/AkshatJoshi2000/P.U.B---Plus-Ultra-Bot)
   
 
-  <h5 align = "left">Plus Ultra Bot (P.U.B) is a next-generation fully featured multi-purpose discord bot which aims to cover the small aspects thus making hanging out with family and friends more convenient and fun.
+  <h5 align = "left">Plus Ultra Bot (P.U.B) is a next-generation fully featured multi-purpose discord bot which aims to cover the small aspects thus making hanging out with friends and family more convenient and fun.
 </h5>
 </div>
 
