@@ -362,46 +362,4 @@ async def delete(ctx,amount=2):
     await ctx.channel.purge(limit = amount)
 
  
-# @client.event
-# async def on_member_join(member):
-#     with open('users.json', 'r') as f:
-#         users = json.load(f)
-
-#     await update(users, member)
-
-#     with open('users.json','w') as f:
-#         json.dump(users, f)
-
-
-# @client.event
-# async def on_message(message):
-#     with open('users.json', 'r') as f:
-#         users = json.load(f)
-
-#     await update(users, message.author)
-#     await add_xp(users, message.author, 2)
-#     await level_up(users, message.author, message.channel)
-
-#     with open('users.json','w') as f:
-#         json.dump(users, f)
- 
-# async def update(users, user):
-#     if not user.id in users:
-#         users[user.id] = {}
-#         users[user.id]['xp'] = 0
-#         users[user.id]['level'] = 1
-
-# async def add_xp(users, user, exp):
-#     users[user.id]['xp'] += exp
-
-# async def level_up(users, user, channel):
-#     xp = users[user.id]['xp']
-#     lvl_s = users[user.id]['level']
-#     lvl_e = int(xp ** (1/4))
-
-#     if lvl_s < lvl_e:
-#         await client.send_message(channel, '{} has leveled up {}'.format(user.mention, lvl_e))
-#         users[user.id]['level'] = lvl_e
-
-
-client.run("NzUzOTgyNDk3ODQyMzk3MTk1.X1uG6w.4YZkwoz744yvNDlu1A2a1ZtEiqc")
+client.run(<KEY>)
