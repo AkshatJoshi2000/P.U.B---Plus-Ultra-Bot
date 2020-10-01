@@ -9,13 +9,12 @@
   </h3>
 
  
-  ![GitHub All Releases](https://img.shields.io/github/downloads/AkshatJoshi2000/TOP-NEWS-STORIES/total?logo=Github&logoColor=%09%23FF0000&style=flat-square)
-  ![GitHub repo size](https://img.shields.io/github/repo-size/AkshatJoshi2000/TOP-NEWS-STORIES?style=flat-square)
-  ![GitHub](https://img.shields.io/github/license/AkshatJoshi2000/TOP-NEWS-STORIES)
+  ![GitHub repo size](https://img.shields.io/github/repo-size/AkshatJoshi2000/P.U.B---Plus-Ultra-Bot)
+  ![GitHub](https://img.shields.io/github/license/AkshatJoshi2000/P.U.B---Plus-Ultra-Bot)
   ![PyPI](https://img.shields.io/pypi/v/selenium?color=%09&label=selenium&style=flat-square)
-  ![GitHub release (latest by date)](https://img.shields.io/github/v/release/AkshatJoshi2000/TOP-NEWS-STORIES)
-  ![GitHub commits since latest release (by date)](https://img.shields.io/github/commits-since/AkshatJoshi2000/P.U.B---Plus-Ultra-Bot/latest)
-  ![Github All Contributors](https://img.shields.io/github/all-contributors/AkshatJoshi2000/P.U.B---Plus-Ultra-Bot)
+  ![GitHub commit activity](https://img.shields.io/github/commit-activity/m/AkshatJoshi2000/P.U.B---Plus-Ultra-Bot)
+  ![GitHub last commit](https://img.shields.io/github/last-commit/AkshatJoshi2000/P.U.B---Plus-Ultra-Bot)
+  ![GitHub contributors](https://img.shields.io/github/contributors/AkshatJoshi2000/P.U.B---Plus-Ultra-Bot)
   
 
   <h5 align = "left">Plus Ultra Bot (P.U.B) is a next-generation fully featured multi-purpose discord bot which aims to cover the small aspects, thus making hanging out with friends and family more convenient and fun.
