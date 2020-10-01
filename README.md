@@ -74,7 +74,13 @@ This will display help for the tool. Here are all the endpoints it supports.
 ```sh
    pub/weather shibuya japan
  ```
-<img src="Assets/Shibuya_weather.png" alt="PLUS ULTRA" width = 200px, height = 200px></a>  
+<img src="Assets/Shibuya_weather.png" alt="PLUS ULTRA" width = 200px, height = 200px></a>
+
+
+```sh
+   pub/weather "san isidro" japan  #City name consisting of more than one word must me written in-between ""             
+ ```
+<img src="Assets/san_isidro.png" alt="PLUS ULTRA" width = 200px, height = 200px></a>
 </div>
 
 
