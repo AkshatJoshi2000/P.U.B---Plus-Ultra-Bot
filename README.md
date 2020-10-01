@@ -108,7 +108,7 @@ This will display help for the tool. Here are all the endpoints it supports.
  
 #### News
  ```sh
-   pub/meaning evasive          
+   pub/meaning anemoia          
  ```
- <img src="Assets/meaning.png" alt="PLUS ULTRA" width = 400px, height = 400px></a>
+ <img src="Assets/meaning.png" alt="PLUS ULTRA"></a>
 
