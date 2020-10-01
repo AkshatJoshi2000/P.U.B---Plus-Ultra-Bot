@@ -96,14 +96,14 @@ This will display help for the tool. Here are all the endpoints it supports.
 ```sh
    pub/cric csk mi           
  ```
- <p>When the name of both the teams is passed as a parameter, the match summary of their previous match and the date of their next match is displayed</p>
+ <p>When the name of both the teams are passed as a parameter, the match summary of their previous match and the date of their next match is displayed</p>
  <img src="Assets/csk vs mi (parameter).png" alt="PLUS ULTRA"></a>
  
  
  ```sh
    pub/cric           
  ```
- <p>When nothing is passed as parameter then the bot will return the latest feed redaring cricket</p>
+ <p>When nothing is passed as a parameter, the bot will return the latest score feed redaring cricket</p>
  <img src="Assets/no parameter cric.png" alt="PLUS ULTRA"></a>
  
 #### Dictionary
