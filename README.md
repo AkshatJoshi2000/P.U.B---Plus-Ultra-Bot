@@ -5,7 +5,7 @@
   <h3 align="center">
     <img src="Assets/Plus Ultra Bot.png" alt="PLUS ULTRA" width = 400px, height = 250px></a><br>
     <br>
-   <p align="center" ><ins><strong>P.U.B</strong> <em>- A modern-day multi-purpose discord bot.</em></ins></p>
+   <p align="center" ><ins><strong>P.U.B</strong> <em>- A modern day multi-purpose discord bot.</em></ins></p>
   </h3>
 
  
