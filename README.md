@@ -33,8 +33,8 @@
   |---------------|-------------------------------------|----------------------------|
   | /join         | Adds the bot to the voice channel   | pub/join                   |
   | /play         | Plays and add new songs to the queue| pub/play <name of the song>|
-  | /queu         | Shows the queue                     | pub/queue                  |
-  |/song-info     | Returns info regarding the song     | pub/song-info              |
+  | /queue         | Shows the queue                     | pub/queue                 |
+  | /song-info     | Returns info regarding the song     | pub/song-info             |
   
 * A reaction reply gif, `pub/g  <gif action> <member>` (member is optional)
 * Random anime nickname - a random anime nickname will be assigned to every new member when they will join the server. 
