@@ -14,6 +14,7 @@
   ![PyPI](https://img.shields.io/pypi/v/selenium?color=%09&label=selenium&style=flat-square)
   ![GitHub top language](https://img.shields.io/github/languages/top/AkshatJoshi2000/P.U.B---Plus-Ultra-Bot)
   ![GitHub last commit](https://img.shields.io/github/last-commit/AkshatJoshi2000/P.U.B---Plus-Ultra-Bot)
+  ![GitHub Repo stars](https://img.shields.io/github/stars/AkshatJoshi2000/P.U.B---Plus-Ultra-Bot?style=social)
   ![GitHub contributors](https://img.shields.io/github/contributors/AkshatJoshi2000/P.U.B---Plus-Ultra-Bot)
   
 
