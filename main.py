@@ -53,6 +53,16 @@ async def on_ready():
 for i in exts:
     client.load_extension(i)
 
+    
+newUserMessage = ['Omae wa mo shindeiru','to the big leagues kid!', 'Starting today you are a HERO!', 'SASAGEYO!!!','May the Force be with you','The World is here where were you?','Give up on your Dreams and Die!','There you are you little shit!','The King in the North','How ya doin?','With great penis comes great responsibilities!','Hope you quarantined yourself for 2 weeks before coming here...','eat my hair and gain my power!','you might be the one for me','starting today you are a Rental Girlfirend!','To Indu IT School']
+
+@client.event
+async def on_member_join(member: discord.Member):
+    p = numpy.random.randint(16,size=1)
+    q = p[0]
+    channel = discord.utils.get(member.guild.channels, name='general')
+    await channel.send('Welcome '+str(member.mention)+' '+str(newUserMessage[q]))
+
 
 
 @client.event
