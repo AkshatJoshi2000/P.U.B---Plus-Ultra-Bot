@@ -63,6 +63,9 @@ async def on_member_join(member: discord.Member):
     channel = discord.utils.get(member.guild.channels, name='general')
     await channel.send('Welcome '+str(member.mention)+' '+str(newUserMessage[q]))
 
+@client.event
+async def on_command_error(ctx,error):
+        await ctx.send("No such command x_x")
 
 
 @client.event
