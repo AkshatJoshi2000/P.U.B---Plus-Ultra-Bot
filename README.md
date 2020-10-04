@@ -30,19 +30,19 @@
   <img src="Assets/local train song play.png" alt="PLUS ULTRA"></a><br>
    
 
-  | Flag          | Description                         | Usage                      |
-  |---------------|-------------------------------------|----------------------------|
-  | /join         | Adds the bot to the voice channel   | pub/join                   |
-  | /play         | Plays and add new songs to the queue| pub/play <name of the song>|
-  | /queue        | Shows the queue                     | pub/queue                  |
-  | /song-info    | Returns info regarding the song     | pub/song-info              |
-  | /stop         | Song ends and stops                 | pub/stop                   |
-  | /pause        | Song pauses                         | pub/pause                  |
-  | /resume       | Resumes a paused song               | pub/resume                 |
-  | /prev         | Play previous song                  | pub/prev                   |
-  | /repea        | Replays a song                      | pub/repeat                 |
-  | /leave        | Leaves the channel                  | pub/channel                |
-  | /move-bot     | Move to another channel             | pub/move-bot <channel name> |
+  | Flag          | Description                         | Usage                         |
+  |---------------|-------------------------------------|-------------------------------|
+  | /join         | Adds the bot to the voice channel   | pub/join                      |
+  | /play         | Plays and add new songs to the queue| pub/play <name of the song>   |
+  | /queue        | Shows the queue                     | pub/queue                     |
+  | /song-info    | Returns info regarding the song     | pub/song-info                 |
+  | /stop         | Song ends and stops                 | pub/stop                      |
+  | /pause        | Song pauses                         | pub/pause                     |
+  | /resume       | Resumes a paused song               | pub/resume                    |
+  | /prev         | Play previous song                  | pub/prev                      |
+  | /repea        | Replays a song                      | pub/repeat                    |
+  | /leave        | Leaves the channel                  | pub/channel                   |
+  | /move-bot     | Move to another channel             | pub/move-bot <channel name>   |
   
 * A reaction reply gif, `pub/g  <gif action> <member>` (member is optional)
 * Random anime nickname - a random anime nickname will be assigned to every new member when they will join the server. 
