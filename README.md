@@ -128,5 +128,10 @@ This will display help for the tool. Here are all the endpoints it supports.
 * Make sure that your changes do not conflict with the core files.
 * Submit pull requests.
 
+## Contributors
+<a href="https://github.com/AkshatJoshi2000/P.U.B---Plus-Ultra-Bot/graphs/contributors">
+  <img src="https://contributors-img.web.app/image?repo=AkshatJoshi2000/P.U.B---Plus-Ultra-Bot" />
+</a>
+
 ## Licence
 This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
