@@ -243,12 +243,14 @@ async def g(ctx, x, r = None):
 
 
 @client.command()
-async def fb(ctx, team_a, team_b):
+async def fblive(ctx):
     embed = discord.Embed(title = 'INFO', color = discord.Colour.from_rgb(0, 255, 255))
-    team_a = str(team_a)
-    team_b = str(team_b)
-    result = score(team_a, team_b)
-    embed.add_field(name = "status", value = result, inline = True)
+
+    result = football_live()
+    x = len(result)
+    for i in result:
+        embed.add_field(name = "Match", value = i, inline = False)
+
     embed.set_footer(icon_url = ctx.author.avatar_url, text = f"Requested by {ctx.author.name}")
     await ctx.send(embed = embed)
  
