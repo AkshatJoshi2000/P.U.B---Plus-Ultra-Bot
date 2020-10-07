@@ -30,6 +30,7 @@ cg = CoinGeckoAPI()
 
 
 client  = commands.Bot(command_prefix = 'kb$')
+client.remove_command('help')
 
 @client.event
 async def on_ready():
@@ -369,7 +370,20 @@ async def cric(ctx, team_A = None, team_B = None):
 
     embed.set_footer(icon_url = ctx.author.avatar_url, text = f"Requested by {ctx.author.name}")
     await ctx.send(embed = embed)
-
+    
+@client.command(pass_context=True)
+async def help(ctx):
+    author = ctx.message.author
+    embed = discord.Embed(colur = discord.Colour.orange())
+    embed.set_author(name='Available Commands')
+    embed.add_field(name='Music',value='• pub/join\n• pub/play\n• pub/queue\n• pub/song-info\n• pub/stop\n• pub/pause\n• pub/resume\n• pub/prev\n• pub/repeat\n• pub/channel\n• pub/move-bot',inline=True)
+    
+    embed.add_field(name='Endpoints',value='• pub/news\n• pub/weather\n• pub/roll\n• pub/toss\n• pub/remmin\n• pub/remhr\n• pub/cprice\n• pub/g (member is optional)\n• pub/meaning\n• pub/words\n• pub/movie <movie name>\n• pub/delete\n• pub/wiki\n• pub/fb <team 1> <team 2>\n• pub/cric <team 1> <team 2> (optional)\n• pub/creepy\n• pub/animetoday\n\n\n',inline=True)
+    embed.set_footer(text='Check out our readme for further queries \nhttps://github.com/AkshatJoshi2000/P.U.B---Plus-Ultra-Bot', icon_url = ctx.author.avatar_url)
+    
+    await ctx.send(embed=embed)
+    
+    
 @client.command()
 async def delete(ctx,amount=2):
     await ctx.channel.purge(limit = amount)
