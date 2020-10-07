@@ -80,8 +80,7 @@ This will display help for the tool. Here are all the endpoints it supports.
 | /movie                  | Returns general info regarding the movie                | pub/movie <movie's name>                           |
 | /delete                 | Deletes the last test                                   | pub/delete                                         |
 | /wiki                   | Gives wiki summary of the input subject                 | pub/wiki <subject>                                 |
-| /fb                     | Returns soccer updates                                  | pub/fb <team 1> <team 2>                           |
-| /cric                   | Return cricket updates                                  | pub/cric <team 1> <team 2> (optional)              |
+| /fb                     | Returns live soccer scores                              | pub/fblive                                         |
 | /creepy                 | Fetched you a random creepy story                       | pub/creepy                                         |
 | /animetoday             | Returns a random anime with synopsis                    | pub/animetoday                                     |
 
