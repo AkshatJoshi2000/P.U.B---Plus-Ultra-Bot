@@ -22,6 +22,10 @@
 </h5>
 </div>
 
+## Add Bot
+
+[Click here](https://discord.com/oauth2/authorize?client_id=753982497842397195&permissions=8&scope=bot) to add P.U.B to your server
+
 ## Features
 <strong>P.U.B</strong> builds on the well established usability  of `discord.py`, and gives you:
 
