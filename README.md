@@ -67,10 +67,10 @@ This will display help for the tool. Here are all the endpoints it supports.
 | Flag                    | Description                                             | Usage                                              |
 |-------------------------|---------------------------------------------------------|----------------------------------------------------|
 | /help                   | Gives a bot endpoints                                   | pub/help                                           |
-| /news                   | Returns headlines regarding the input subject          | pub/news <subject>                                 |
+| /news                   | Returns headlines regarding the input subject           | pub/news <subject>                                 |
 | /weather                | Returns weather info of the input city                  | pub/weather <city> <country>                       |
 | /roll                   | Rolls a dice                                            | pub/roll                                           |
-| /toss                   | Tosses a coin                                           | puebab/toss                                        |
+| /toss                   | Tosses a coin                                           | pub/toss                                           |
 | /remmin                 | Sets a reminder (in mins)                               | pub/remmin <time in mins> <text>                   |
 | /remhr                  | Sets a reminder (in hrs)                                | pub/remhr <time in hr> <text>                      |
 | /cprice                 | Prints info regarding the input cryptocurrency          | pub/cprice <cryptocurrency>                        |
