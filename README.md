@@ -40,10 +40,19 @@
   | /pause        | Song pauses                         | pub/pause                     |
   | /resume       | Resumes a paused song               | pub/resume                    |
   | /prev         | Play previous song                  | pub/prev                      |
-  | /repea        | Replays a song                      | pub/repeat                    |
+  | /repeat       | Replays a song                      | pub/repeat                    |
   | /leave        | Leaves the channel                  | pub/channel                   |
   | /move-bot     | Move to another channel             | pub/move-bot <channel name>   |
   
+  * <strong>Aliases</strong>
+      
+     |  CMD       | Alias                                |
+     |------------|--------------------------------------|
+     | /play      | /p, /pl                              | 
+     | /queue     | /q, song-list, /current-songs        |
+     | /leave     | /get-out, /disconnect, /leave voice  |
+     | /song-info | /song?, /now playing, /current-song  |
+     
 * A reaction reply gif, `pub/g  <gif action> <member>` (member is optional)
 * Random anime nickname - a random anime nickname will be assigned to every new member when they will join the server. 
 
