@@ -365,8 +365,8 @@ async def anime(ctx):
 
 
 @client.command()
-async def cric(ctx, team_A = None, team_B = None):
-    z = score(team_A, team_B)
+async def criclive(ctx):
+    z = cricket_live()
     embed = discord.Embed(title = " ", color = discord.Colour.green())
     embed.add_field(name = "Overview", value=z)
 
