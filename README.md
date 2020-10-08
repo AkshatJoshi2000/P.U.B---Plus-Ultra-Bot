@@ -10,6 +10,7 @@
 
  
   ![GitHub repo size](https://img.shields.io/github/repo-size/AkshatJoshi2000/P.U.B---Plus-Ultra-Bot)
+  ![GitHub](https://img.shields.io/github/license/AkshatJoshi2000/P.U.B---Plus-Ultra-Bot)
   ![PyPI](https://img.shields.io/pypi/v/selenium?color=%09&label=selenium&style=flat)
   ![GitHub top language](https://img.shields.io/github/languages/top/AkshatJoshi2000/P.U.B---Plus-Ultra-Bot)
   ![GitHub last commit](https://img.shields.io/github/last-commit/AkshatJoshi2000/P.U.B---Plus-Ultra-Bot)
