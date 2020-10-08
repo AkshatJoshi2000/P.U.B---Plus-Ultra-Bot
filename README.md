@@ -134,7 +134,7 @@ This will display help for the tool. Here are all the endpoints it supports.
 </a>
 
 ## Licence
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
+This project is licensed under the Apache License - see the [LICENSE](LICENSE) file for details
 
 ---
 [![forthebadge](https://forthebadge.com/images/badges/built-with-love.svg)](https://forthebadge.com)
